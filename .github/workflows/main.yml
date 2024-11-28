@@ -1,34 +1,20 @@
-name: CI Workflow
-
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        
-      - name: Set up Python (if applicable)
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies (if applicable)
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run tests (if applicable)
-        run: |
-          pytest tests/
-
-      - name: Print working directory (for testing)
-        run: pwd
+    push:
+      branches:
+        - master
+    pull_request:
+      branches:
+        - master
+  
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+  
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+  
+        - name: Run a script or command
+          run: |
+            echo "GitHub Actions is triggered!"
+  
