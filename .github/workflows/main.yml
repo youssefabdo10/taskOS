@@ -11,10 +11,7 @@ on:
       runs-on: ubuntu-latest
   
       steps:
-        - name: Checkout repository
-          uses: actions/checkout@v2
-  
-        - name: Run a script or command
-          run: |
-            echo "GitHub Actions is triggered!"
+        - name: 'TESTING GITHUB'
+          uses: pwd
+            
   
