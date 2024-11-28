@@ -4,12 +4,16 @@ on:
         - master
 
 
-        
+
   jobs:
     build:
       runs-on: ubuntu-latest
   
       steps:
+        - name: 'TESTING GITHUB'
+          uses: pwd
+          
+          
         - name: 'TESTING GITHUB'
           uses: pwd
             
