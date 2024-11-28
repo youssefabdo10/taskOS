@@ -1,1 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'TESTING GITHUB ACTION'
+      run: pwd
+
+      - name: 'TESTING GITHUB ACTION'
+      run: echo youssefabdo
 
